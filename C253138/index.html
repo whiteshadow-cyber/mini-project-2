@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Karnaphuli Kitchen - Chattogram Restaurant</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body id="home" class="scroll-smooth bg-[#f7f9fc] font-['DM_Sans',Arial,sans-serif] text-[#1e2a44]">
+
+    <!-- 1. NAVIGATION BAR -->
+
+    <header id="site-header" class="sticky top-0 z-10 border-b border-[#dde3ee] bg-[#f7f9fc]/95 backdrop-blur">
+
+        <nav id="main-navigation" aria-label="Main navigation"
+            class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+
+            <a href="#home" class="font-['Fraunces',Georgia,serif] text-xl font-extrabold">
+                Karnaphuli Kitchen
+            </a>
+
+            <button id="menu-button" type="button" aria-expanded="false" aria-controls="menu-links"
+                class="rounded-lg border border-[#1e2a44] px-3 py-2 text-sm font-bold hover:bg-[#1e2a44] hover:text-white focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-[#d62f2f] md:hidden">
+                Menu
+            </button>
+
+            <ul id="menu-links"
+                class="absolute left-0 top-full hidden w-full flex-col gap-1 border-b border-[#dde3ee] bg-[#f7f9fc] px-6 pb-4 md:static md:flex md:w-auto md:flex-row md:gap-4 md:border-0 md:bg-transparent md:p-0">
+
+                <li><a href="#menu" class="nav-link block rounded-lg px-3 py-2 hover:bg-[#1e2a44] hover:text-white">Menu</a></li>
+                <li><a href="#visit" class="nav-link block rounded-lg px-3 py-2 hover:bg-[#1e2a44] hover:text-white">Visit us</a></li>
+                <li><a href="#reserve" class="nav-link block rounded-lg bg-[#d62f2f] px-3 py-2 text-white hover:bg-[#1e2a44]">Book a table</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main id="main-content">
+
+        <!-- 2. HERO SECTION -->
+
+        <section id="hero" class="mx-auto grid max-w-5xl gap-10 px-6 py-14 md:grid-cols-[3fr_2fr] md:items-center md:py-20">
+
+            <div id="hero-text">
+
+                <h1 class="font-['Fraunces',Georgia,serif] text-4xl font-extrabold leading-tight md:text-6xl">
+                    Chattogram's mezban flavours, served at your table.
+                </h1>
+
+                <p class="mt-5 max-w-[55ch] text-lg leading-relaxed text-[#46546f]">
+                    Slow-cooked beef, fresh river fish and rice dishes cooked the way
+                    Chittagonian families cook them for a feast.
+                </p>
+
+                <div class="mt-7 flex flex-wrap gap-3">
+                    <a href="#reserve" id="book-button"
+                        class="rounded-lg bg-[#d62f2f] px-6 py-3 font-bold text-white hover:bg-[#1e2a44] focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-[#f4b400]">
+                        Book a table
+                    </a>
+                    <a href="#menu" id="see-menu-button"
+                        class="rounded-lg border border-[#1e2a44] px-6 py-3 font-bold hover:bg-[#1e2a44] hover:text-white focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-[#d62f2f]">
+                        See the menu
+                    </a>
+                </div>
+
+            </div>
+
+            <aside id="todays-special" class="rounded-2xl bg-[#f4b400] p-6" aria-label="Today's special">
+                <p class="text-sm font-bold">Today's special</p>
+                <h2 class="mt-2 font-['Fraunces',Georgia,serif] text-3xl font-extrabold leading-tight">
+                    Mezbani Beef with Plain Polao
+                </h2>
+                <p class="mt-3 leading-relaxed">
+                    Beef simmered for hours in black pepper and whole spices.
+                </p>
+                <p class="mt-4 text-2xl font-extrabold">৳ 450</p>
+            </aside>
+
+        </section>
+
+
+        <!-- 3. MENU SECTION -->
+
+        <section id="menu" class="border-y border-[#dde3ee] bg-white">
+
+            <div class="mx-auto max-w-5xl px-6 py-14">
+
+                <h2 class="font-['Fraunces',Georgia,serif] text-3xl font-extrabold">Our menu</h2>
+
+                <div id="menu-tabs" class="mt-6 flex flex-wrap gap-2" role="group" aria-label="Menu categories">
+                    <button type="button" data-category="all" aria-pressed="true"
+                        class="tab-button rounded-full border border-[#1e2a44] px-4 py-2 text-sm font-bold">All</button>
+                    <button type="button" data-category="Starters" aria-pressed="false"
+                        class="tab-button rounded-full border border-[#1e2a44] px-4 py-2 text-sm font-bold">Starters</button>
+                    <button type="button" data-category="Mains" aria-pressed="false"
+                        class="tab-button rounded-full border border-[#1e2a44] px-4 py-2 text-sm font-bold">Mains</button>
+                    <button type="button" data-category="Desserts" aria-pressed="false"
+                        class="tab-button rounded-full border border-[#1e2a44] px-4 py-2 text-sm font-bold">Desserts</button>
+                </div>
+
+                <div id="menu-grid" class="mt-8 grid gap-5 md:grid-cols-2"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 4. VISIT SECTION -->
+
+        <section id="visit" class="mx-auto grid max-w-5xl gap-8 px-6 py-14 md:grid-cols-2">
+
+            <div id="opening-hours" class="rounded-xl border border-[#dde3ee] bg-white p-6">
+                <h2 class="font-['Fraunces',Georgia,serif] text-2xl font-extrabold">Opening hours</h2>
+                <dl class="mt-4 flex flex-col gap-3">
+                    <div class="flex justify-between border-b border-[#dde3ee] pb-3">
+                        <dt>Saturday to Thursday</dt>
+                        <dd class="font-bold">12:00 pm to 10:30 pm</dd>
+                    </div>
+                    <div class="flex justify-between">
+                        <dt>Friday</dt>
+                        <dd class="font-bold">1:30 pm to 11:00 pm</dd>
+                    </div>
+                </dl>
+            </div>
+
+            <div id="location" class="rounded-xl border border-[#dde3ee] bg-white p-6">
+                <h2 class="font-['Fraunces',Georgia,serif] text-2xl font-extrabold">Find us</h2>
+                <p class="mt-4 leading-relaxed text-[#46546f]">
+                    Riverside Road, Chattogram, Bangladesh
+                </p>
+                <p class="mt-3 leading-relaxed text-[#46546f]">
+                    Call to ask about large groups and family gatherings.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- 5. RESERVATION SECTION -->
+
+        <section id="reserve" class="bg-[#1e2a44] text-white">
+
+            <div class="mx-auto grid max-w-5xl gap-8 px-6 py-14 md:grid-cols-2">
+
+                <div>
+                    <h2 class="font-['Fraunces',Georgia,serif] text-3xl font-extrabold">Book a table</h2>
+                    <p class="mt-3 max-w-[45ch] leading-relaxed text-[#cfd7e8]">
+                        Tell us when you are coming and how many people will join you.
+                    </p>
+                </div>
+
+                <form id="reservation-form" class="flex flex-col gap-4" novalidate>
+
+                    <div class="flex flex-col gap-1">
+                        <label for="guest-name" class="text-sm font-bold">Name</label>
+                        <input id="guest-name" name="name" type="text" required
+                            class="rounded-lg bg-white px-3 py-2 text-[#1e2a44] focus-visible:outline-[3px] focus-visible:outline-[#f4b400]">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex flex-col gap-1">
+                            <label for="guest-date" class="text-sm font-bold">Date</label>
+                            <input id="guest-date" name="date" type="date" required
+                                class="rounded-lg bg-white px-3 py-2 text-[#1e2a44] focus-visible:outline-[3px] focus-visible:outline-[#f4b400]">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label for="guest-count" class="text-sm font-bold">Guests</label>
+                            <input id="guest-count" name="guests" type="number" min="1" max="20" value="2" required
+                                class="rounded-lg bg-white px-3 py-2 text-[#1e2a44] focus-visible:outline-[3px] focus-visible:outline-[#f4b400]">
+                        </div>
+                    </div>
+
+                    <button type="submit" id="reserve-button"
+                        class="self-start rounded-lg bg-[#f4b400] px-6 py-3 font-bold text-[#1e2a44] hover:bg-white focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-white">
+                        Request booking
+                    </button>
+
+                    <p id="reservation-status" role="status" class="min-h-6 text-sm font-bold"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer id="site-footer" class="bg-white">
+        <div class="mx-auto flex max-w-5xl flex-col gap-2 px-6 py-6 text-sm md:flex-row md:items-center md:justify-between">
+            <p>&copy; 2026 Karnaphuli Kitchen. A fictional restaurant for a class project.</p>
+            <a href="#home" class="font-bold underline hover:text-[#d62f2f]">Back to top</a>
+        </div>
+    </footer>
+
+
+    <script>
+
+        // 1. MOBILE MENU TOGGLE
+
+        const menuButton = document.getElementById("menu-button");
+        const menuLinks = document.getElementById("menu-links");
+
+        function setMenu(isOpen) {
+            menuLinks.classList.toggle("hidden", !isOpen);
+            menuLinks.classList.toggle("flex", isOpen);
+            menuButton.setAttribute("aria-expanded", String(isOpen));
+            menuButton.textContent = isOpen ? "Close" : "Menu";
+        }
+
+        menuButton.addEventListener("click", function () {
+            setMenu(menuButton.getAttribute("aria-expanded") !== "true");
+        });
+
+        menuLinks.addEventListener("click", function (event) {
+            if (event.target.classList.contains("nav-link")) {
+                setMenu(false);
+            }
+        });
+
+
+        // 2. MENU DATA (ARRAY OF OBJECTS)
+
+        const dishes = [
+            { name: "Samosa with Chutney", category: "Starters", price: 60, text: "Crisp pastry filled with spiced potato and peas." },
+            { name: "Fuchka", category: "Starters", price: 80, text: "Crunchy shells with tamarind water and spiced chickpeas." },
+            { name: "Beguni", category: "Starters", price: 50, text: "Sliced aubergine fried in a light gram flour batter." },
+            { name: "Mezbani Beef", category: "Mains", price: 380, text: "Slow-cooked beef in black pepper and whole spices." },
+            { name: "Ilish with Mustard", category: "Mains", price: 520, text: "River hilsa steamed in a sharp mustard sauce." },
+            { name: "Kacchi Biryani", category: "Mains", price: 420, text: "Rice and marinated mutton cooked together in one pot." },
+            { name: "Firni", category: "Desserts", price: 90, text: "Ground rice pudding set cold with cardamom and pistachio." },
+            { name: "Payesh", category: "Desserts", price: 100, text: "Milk and fragrant rice simmered until thick." },
+            { name: "Rasmalai", category: "Desserts", price: 120, text: "Soft cheese dumplings in sweet saffron milk." }
+        ];
+
+
+        // 3. DISPLAY AND FILTER THE MENU
+
+        const menuGrid = document.getElementById("menu-grid");
+        const tabButtons = document.querySelectorAll(".tab-button");
+
+        function showDishes(category) {
+
+            menuGrid.innerHTML = "";
+
+            const visibleDishes = category === "all"
+                ? dishes
+                : dishes.filter((dish) => dish.category === category);
+
+            visibleDishes.forEach((dish) => {
+
+                const card = document.createElement("article");
+
+                card.className = "rounded-xl border border-[#dde3ee] bg-[#f7f9fc] p-5 transition-transform duration-200 hover:-translate-y-1 hover:border-[#d62f2f]";
+
+                card.innerHTML = `
+                    <div class="flex items-baseline justify-between gap-4">
+                        <h3 class="text-lg font-bold">${dish.name}</h3>
+                        <strong class="text-[#d62f2f]">৳ ${dish.price}</strong>
+                    </div>
+                    <p class="mt-2 leading-relaxed text-[#46546f]">${dish.text}</p>
+                `;
+
+                menuGrid.appendChild(card);
+
+            });
+
+        }
+
+        function setActiveTab(selectedButton) {
+            tabButtons.forEach((button) => {
+                const isActive = button === selectedButton;
+                button.setAttribute("aria-pressed", String(isActive));
+                button.classList.toggle("bg-[#1e2a44]", isActive);
+                button.classList.toggle("text-white", isActive);
+            });
+        }
+
+        tabButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+                setActiveTab(button);
+                showDishes(button.dataset.category);
+            });
+        });
+
+        setActiveTab(tabButtons[0]);
+        showDishes("all");
+
+
+        // 4. RESERVATION FORM CHECK
+
+        const reservationForm = document.getElementById("reservation-form");
+        const reservationStatus = document.getElementById("reservation-status");
+
+        reservationForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            const name = reservationForm.elements["name"].value.trim();
+            const date = reservationForm.elements["date"].value;
+            const guests = Number(reservationForm.elements["guests"].value);
+
+            if (name === "" || date === "") {
+                reservationStatus.textContent = "Enter your name and the date.";
+                reservationStatus.className = "min-h-6 text-sm font-bold text-[#ffb4a8]";
+                return;
+            }
+
+            if (guests < 1 || guests > 20) {
+                reservationStatus.textContent = "We seat 1 to 20 guests per booking.";
+                reservationStatus.className = "min-h-6 text-sm font-bold text-[#ffb4a8]";
+                return;
+            }
+
+            reservationStatus.textContent = `Thanks, ${name}. We have your request for ${guests} on ${date}.`;
+            reservationStatus.className = "min-h-6 text-sm font-bold text-[#9be7b5]";
+            reservationForm.reset();
+
+        });
+
+    </script>
+
+</body>
+
+</html>
